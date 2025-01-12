@@ -20,9 +20,6 @@ public:
             if (!flag)
                 return (false);
         }
-        printf(">>>>>>>%c\n", s[i]);
-        if (s[i])
-            return (false);
         return (true);
         
     }
