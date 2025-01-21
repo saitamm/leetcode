@@ -10,9 +10,6 @@ public:
             if (nums[i] != nums[i - 1])
                 count = 0;
             nums[i - div] = nums[i];
-            printf(">>>%d\n", nums[i - div]);
-            printf("****%d\n", count);
-            printf("----%d\n", i);
             count++;
             if (count > 2)
                 div++;
