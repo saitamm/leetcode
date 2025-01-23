@@ -19,11 +19,7 @@ public:
                 vector[i+1] = vector[i] + 1; 
         }
         for(int i = 0;i < ratings.size();i++)
-        {
-            printf(":;;%d\n", vector[i]);
             min +=vector[i]; 
-        }
         return (min);
-        
     }
 };
