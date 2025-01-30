@@ -10,7 +10,6 @@ public:
                 right = left;
             left--;
         }
-        cout << "::" << right;
         return(right == 0);
     }
 };
