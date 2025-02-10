@@ -35,7 +35,6 @@ public:
             while (j < hash_map[strs[i]].size() )
             {
                 int index = hash_map[strs[i]][j];
-                cout << "::::" << copy_strs[index] << endl; ;
                 result[k].push_back(copy_strs[index]);
                 hash_map[strs[i]][j] = -1;
                 j++;
