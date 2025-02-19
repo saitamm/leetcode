@@ -17,16 +17,11 @@ public:
                 }
             if (prefix == suffix && k + j == n)
                 return (j);
-            cout << "prefix = " << prefix << endl;
             while (suffix <= prefix && k <= n)
             {
-                // int temp = suffix;
                 suffix += n - k;
                 k++;
             }
-            cout << "suffix = " << suffix << endl;
-            cout << "j + k = " << j + k<< endl;
-            // cout << "n - k = " << n -k + 1<< endl;
         }
         return (-1);
         
