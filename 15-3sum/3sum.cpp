@@ -3,24 +3,25 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums)
     {
         set<vector<int>> reslt;
-        unordered_map<int, int> map;
         sort(nums.begin(),nums.end());
-        for(int i = 0;i < nums.size();i++)
-            map[nums[i]] = i;
-        for(int i = 0; i<nums.size() -1;i++)
+        for(int i =0;i < nums.size() - 1;i++)
         {
-            int j = i+1;
-            while (j < nums.size())
+            int left = i + 1;
+            int right = nums.size()-1;
+            while (left != right)
             {
-                int k = -nums[i] - nums[j];
-                if (map[k] > i  && map[k] > j)
+                if (nums[left] + nums[right] == - nums[i])
                 {
-                    vector<int> target = {nums[i], nums[j], nums[map[-nums[i] - nums[j]]]};
-                    reslt.insert(target);
+                    reslt.insert({nums[i], nums[left], nums[right]});
+                    left++;
+                    //break;
                 }
-                j++;
+                else if (nums[left] + nums[right] < -nums[i])
+                    left++;
+                else
+                    right--;
             }
-        }  
+        }
         vector<vector<int>> res(reslt.begin(), reslt.end());
         return (res);      
     }
