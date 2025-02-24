@@ -8,7 +8,8 @@ public:
 
         while (left < height.size())
         {
-            water = max(water, min(height[left], height[right]) * (right - left));
+            int temp = min(height[left], height[right]) * (right - left);
+            water = max(water, temp);
             if (height[right] < height[left])
                 right--;
             else
