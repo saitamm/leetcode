@@ -8,10 +8,6 @@ public:
 
         while (left < height.size())
         {
-            // if (height[left] < height[right])
-            //     left = right;
-            // cout << "::::" << height[right] * (right - left) << endl;
-            // cout << "******" << water<<endl ;
             water = max(water, min(height[left], height[right]) * (right - left));
             if (height[right] < height[left])
                 right--;
