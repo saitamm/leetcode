@@ -5,9 +5,10 @@ public:
         int j  = 0;
         int i = 0;
         int sum = 0;
-        if (gas.size() == 1 && gas[0] >= cost[0])
+        int size = gas.size();
+        if (size == 1 && gas[0] >= cost[0])
             return (0);
-        while (i < gas.size())
+        while (i < size)
         {
             int sum = 0;
             if (gas[i] > cost[i])
@@ -15,15 +16,17 @@ public:
                 sum = gas[i] - cost[i];
                 int end = i;
                 int start = i+1;
-                if (end < 0)end = gas.size();
-                while ((start % gas.size()) != end)
+                if (end < 0)end = size;
+                int mod = start % size;
+                while (mod != end)
                 {
-                    if (sum + gas[start % gas.size()] < cost[start % gas.size()])
+                    mod = start % size;
+                    if (sum + gas[mod] < cost[mod])
                         break;
-                    sum += gas[start % gas.size()] - cost[start%gas.size()];
+                    sum += gas[mod] - cost[mod];
                     start++;
                 }
-                if (start % gas.size() == end)
+                if (mod == end)
                     return (i);
             }
             i++;
