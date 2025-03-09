@@ -7,24 +7,22 @@ public:
         int left = 0;
         int size = nums.size();
         int right = size - 1;
-        if (size< 4)
+        if (size < 4 || (size == 0 && (long long)nums[0] + nums[1]+nums[2]+nums[3] != (long long)target))
         {
             vector<vector<int>> res(st.begin(), st.end());
             return(res);
         }
-        long long sum_i  = (long long)nums[0] + nums[1]+nums[2]+nums[3];
-        if (size == 4 &&(int)sum_i != target )
-        {
-            vector<vector<int>> res(st.begin(), st.end());
-            return(res);
-        }
+        // long long sum_i  = (long long)nums[0] + nums[1]+nums[2]+nums[3];
+        // if (size == 4 &&(int)sum_i != target )
+        // {
+        //     vector<vector<int>> res(st.begin(), st.end());
+        //     return(res);
+        // }
         while (left < size)
         {
             right = size -1;
         while (right >= left)
         {
-            // while (right != left)
-            // {
                 int i = left +1;
                 int j = right -1;
                 while (i < j && i < size && j >= 0)
@@ -42,7 +40,6 @@ public:
 
                 }
             right--;
-            // }
         }
         left++;
         }
