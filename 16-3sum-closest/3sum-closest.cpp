@@ -13,11 +13,13 @@ public:
             right = size - 1;
             while (left != right)
             {
-                int sum = nums[i] + nums[left] + nums[right];
-                // (this->Energy_point >= 1) ? 1 : this->Energy_point;
-                // if (abs(target - sum) <= abs(target - closest))
-                //     closest = sum;
-                closest = (abs(target - sum) <= abs(target - closest)) ? sum :closest;
+                int s1 = nums[i];
+                int s2 = nums[left];
+                int s3 = nums[right];
+                // int sum = nums[i] + nums[left] + nums[right];
+                int sum = s1+s2+s3;
+                if (abs(target - sum) <= abs(target - closest))
+                    closest = sum;
                 if (sum > target)
                     right--;
                 else
