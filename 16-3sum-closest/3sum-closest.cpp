@@ -5,7 +5,6 @@ public:
         int left = 0;
         int size  = nums.size();
         int right  = size -1;
-        int sum;
         sort(nums.begin(), nums.end());
         int closest = -98745;
         for(int i = 0;i < size-1;i++)
@@ -14,11 +13,7 @@ public:
             right = size - 1;
             while (left != right)
             {
-                int s1 = nums[i];
-                int s2 = nums[left];
-                int s3 = nums[right];
-                // int sum = nums[i] + nums[left] + nums[right];
-                sum = s1+s2+s3;
+                int sum = nums[i] + nums[left] + nums[right];
                 if (abs(target - sum) <= abs(target - closest))
                     closest = sum;
                 if (sum > target)
