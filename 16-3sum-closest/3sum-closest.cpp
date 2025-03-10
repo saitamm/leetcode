@@ -14,8 +14,10 @@ public:
             while (left != right)
             {
                 int sum = nums[i] + nums[left] + nums[right];
-                if (abs(target - sum) <= abs(target - closest))
-                    closest = sum;
+                // (this->Energy_point >= 1) ? 1 : this->Energy_point;
+                // if (abs(target - sum) <= abs(target - closest))
+                //     closest = sum;
+                closest = (abs(target - sum) <= abs(target - closest)) ? sum :closest;
                 if (sum > target)
                     right--;
                 else
