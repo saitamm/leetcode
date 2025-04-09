@@ -37,9 +37,6 @@ public:
         while (nums[right] <= 0 && abs(nums[right]) != size)
         {
            hash[right] = ((right + nums[right]) % size + size) % size;
-           cout << "left = " << left<<endl;
-           cout << "Right = " << right<<endl;
-           cout << "hash[right] = "<< hash[right]<<endl;
             if (hash[right] == left && right != left)
                 return (true);
             if (visited[right] == left)
