@@ -5,8 +5,8 @@ public:
         unordered_map <int, int> hash;
         int size = nums.size();
 
-        for(int i= 0;i< size;i++)
-            hash[i] = 0;
+        // for(int i= 0;i< size;i++)
+        //     hash[i] = 0;
         for(int i = 0;i<size;i++)
         {
             hash[nums[i]]++;
