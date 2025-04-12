@@ -2,9 +2,9 @@ class Solution {
 public:
     int longestConsecutive(vector<int>& nums)
     {
-        unordered_set<int> hashSet;
-        for (int i = 0; i < nums.size(); i++)
-            hashSet.insert(nums[i]);
+        unordered_set<int> hashSet(nums.begin(), nums.end());
+        // for (int i = 0; i < nums.size(); i++)
+        //     hashSet.insert(nums[i]);
         int length =0;
         for (int num : hashSet)
         {
