@@ -1,0 +1,12 @@
+name: Metrics        # Name of the workflow
+
+on:
+  schedule: ...      # When to run (e.g. every hour)
+
+jobs:
+  github-metrics:    # The task to do
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest   # Plugin to generate the stats SVG
+        with:
+          plugin_leetcode: yes            # Fetch LeetCode data
