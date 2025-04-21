@@ -18,6 +18,8 @@ public:
             sum -= nums[left];
             left++;
         }
-        return ((len!= INT_MAX) ? len :0);
+        if (len == INT_MAX)
+            return (0);
+        return (len);
     }
 };
