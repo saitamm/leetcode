@@ -11,7 +11,10 @@ public:
             diff[r + 1] -= 1;
         }
         for(int i = 1;i <= nums.size();i++)
+        {
             diff[i]+=diff[i-1];
+
+        }
         for(int i = 0;i <nums.size();i++)
         {
             if (diff[i] < nums[i])
