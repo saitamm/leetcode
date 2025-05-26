@@ -41,8 +41,7 @@ public:
              }
              else
              {
-                int num = stoi(tokens[i]);
-                _stack.push(num);
+                _stack.push(stoi(tokens[i]));
              }
         }
         return (_stack.top());
