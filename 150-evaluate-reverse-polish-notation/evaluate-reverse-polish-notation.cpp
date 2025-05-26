@@ -6,27 +6,44 @@ public:
 
         for(int i = 0;i < tokens.size();i++)
         {
-            stringstream ss(tokens[i]);
-            int num;
-            ss >> num;
-            if (ss.fail())
+            if (tokens[i] == "+")
             {
-
-            int b = _stack.top();
+                int b = _stack.top();
             _stack.pop();
             int a = _stack.top();
             _stack.pop();
-            if (tokens[i] == "+")
                 _stack.push(a + b);
-            else if (tokens[i] == "-")
-                _stack.push(a - b);
-            else if (tokens[i] == "*")
-                _stack.push(a * b);
-            else if (tokens[i] == "/")
-                _stack.push(a / b);
-            continue;
             }
-            _stack.push(num);
+            else if (tokens[i] == "-")
+            {
+                   int b = _stack.top();
+            _stack.pop();
+            int a = _stack.top();
+            _stack.pop();
+
+                _stack.push(a - b);
+            }
+             else if (tokens[i] == "*")
+             {int b = _stack.top();
+            _stack.pop();
+            int a = _stack.top();
+            _stack.pop();
+                _stack.push(a * b);
+
+             }
+             else if (tokens[i] == "/")
+             {
+                int b = _stack.top();
+            _stack.pop();
+            int a = _stack.top();
+            _stack.pop();
+            _stack.push(a/b);
+             }
+             else
+             {
+                int num = stoi(tokens[i]);
+                _stack.push(num);
+             }
         }
         return (_stack.top());
         
