@@ -12,7 +12,6 @@ public:
             count[it.second].push_back(it.first);
         for(int i = count.size()-1 ;i > 0;i--)
         {
-            cout << i<<endl;
             if (count[i].size() > 0)
             {
                 for(int j = 0;j < count[i].size() && k > 0;j++)
