@@ -11,7 +11,6 @@ class Solution(object):
                 vowel[s[i]]+=1
             else:
                 consonant[s[i]]+=1
-                print(consonant[s[i]])
         if consonant and vowel:
             return (max(consonant.values())+max(vowel.values()))
         else:
