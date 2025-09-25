@@ -20,9 +20,7 @@ public:
                 if (right -left== s1.size())
                     return (true);
                 for(int i = left;i < right;i++)
-                {
                     Hash[s2[i]]++;
-                }
             }
             left++;
         }
