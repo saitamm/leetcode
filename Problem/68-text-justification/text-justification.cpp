@@ -30,7 +30,6 @@ public:
                 s+=" ";
                 extra--;
             }
-
             while (s.size() <maxWidth)
                 s+=" ";
             result.push_back(s);
