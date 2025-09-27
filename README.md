@@ -1,7 +1,3 @@
 # leetcode
 
-<div
-style="width=100%;" align="center">
-    <img style="display:block; width=100%;" align="center" src="https://leetcode.com/u/soumayaaitammi2023/"
-/>
-</div>
+![LeetCode Stats](https://leetcard.jacoblin.cool/sait-amm?theme=dark&ext=heatmap)
