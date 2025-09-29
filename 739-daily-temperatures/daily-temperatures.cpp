@@ -13,9 +13,6 @@ public:
             }
             stk.push({idx, temperatures[idx]});
         }
-        // while (!stk.empty()) {
-        // cout << stk.top() << " ";
-        // stk.pop();
         return (answer);
     }
 };
