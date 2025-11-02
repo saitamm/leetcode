@@ -5,15 +5,14 @@ class Solution(object):
         minLR = [0 for x in range(len(height))]
         L = 0
         R = 0
-        k = len(height)-1
         sum =  0
         for i in range(0, len(height)):
             maxLeft[i] = L
-            maxRight[k -i] = R
+            maxRight[len(height) -1 -i] = R
             if height[i] > L :
                 L = height[i]
-            if (height[k-i] > R):
-                R= height[k-i]
+            if (height[len(height)-1-i] > R):
+                R= height[len(height)-1-i]
         for i in range(0, len(height)):
             if  min(maxLeft[i], maxRight[i]) - height[i] > 0 :
                 minLR[i] = min(maxLeft[i], maxRight[i]) - height[i]
