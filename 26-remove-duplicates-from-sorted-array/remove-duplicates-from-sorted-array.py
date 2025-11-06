@@ -6,7 +6,7 @@ class Solution(object):
         """
         iter = 1
         index = 1
-        while (iter < len(nums)):
+        for iter in range(1, len(nums)):
             if (nums[index-1] != nums[iter]):
                 nums[index] = nums[iter]
                 index +=1
