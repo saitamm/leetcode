@@ -4,12 +4,10 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        cost.append(0)
-        dp = [0] * len(cost)
-        dp[len(cost)-2] = cost[len(cost)-2]
-        dp[len(cost)-3] = cost[len(cost)-3]
-        for i in range(len(cost) -4, -1, -1):
-            dp[i] = min(cost[i] + dp[i + 1],cost[i]+ dp[i + 2])
+        dp = cost[:]
+        for i in range(len(cost) -3, -1, -1):
+            c = dp[i]
+            dp[i] = min(c + dp[i + 1],c+ dp[i + 2])
         return (min(dp[0], dp[1]))
 
 
