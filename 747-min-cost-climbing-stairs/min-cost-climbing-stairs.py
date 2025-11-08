@@ -7,10 +7,7 @@ class Solution(object):
         cost.append(0)
         dp = [0] * len(cost)
         dp[len(cost)-2] = cost[len(cost)-2]
-        print(dp[len(cost)-2])
         dp[len(cost)-3] = cost[len(cost)-3]
-        print(dp[len(cost)-3])
-        print(len(cost))
         for i in range(len(cost) -4, -1, -1):
             dp[i] = min(cost[i] + dp[i + 1],cost[i]+ dp[i + 2])
             print(dp[i])
