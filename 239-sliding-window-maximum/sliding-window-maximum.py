@@ -11,15 +11,15 @@ class Solution(object):
             while  queue and queue[-1] < nums[i]:
                 queue.pop()
             queue.append(nums[i])
-        maximum = queue[0]
-        result.append(maximum)
+        max_queue = queue[0]
+        result.append(max_queue)
         for i in range(1, len(nums)-k+1):
-            if nums[i-1] == maximum:
+            if nums[i-1] == max_queue:
                 queue.popleft()
             while  queue and queue[-1] < nums[i+k-1]:
                 queue.pop()
             queue.append(nums[i+k-1])
-            maximum = queue[0]
+            max_queue = queue[0]
             result.append(queue[0])
         return result
         
