@@ -15,5 +15,5 @@ class Solution(object):
                 row.append(matrix[i-1][m-1]+matrix[i-1][m])
             row.append(1)
             matrix.append(row)
-            print(matrix[i])
         return (matrix)
+        
