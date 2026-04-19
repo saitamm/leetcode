@@ -6,11 +6,6 @@ class Solution(object):
         :type speed: List[int]
         :rtype: int
         """
-        # i have to put it in pairs pair(position, speed)
-        # sorted with position 
-        # calcul the time
-        # start the logic from the last 
-        # print the time 
         fleet = len(position)
         pair = []
         for i in range(0, len(position)):
