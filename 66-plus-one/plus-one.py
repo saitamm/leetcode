@@ -15,5 +15,4 @@ class Solution(object):
                 break
         if rest :
             digits.insert(0, 1)
-        print(digits)
         return digits
