@@ -11,7 +11,6 @@ class Solution(object):
         left = 0
         right = left+1
         while left <  len(nums) and right < len(nums):
-            print("---",nums[left], "***", nums[right])
             if nums[left] == 0 and nums[right] != 0:
                 nums[left] = nums[right]
                 nums[right] = 0
