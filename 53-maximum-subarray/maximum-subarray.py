@@ -1,8 +1,11 @@
 class Solution(object):
     def maxSubArray(self, nums):
-        MaxSum = nums[0]
-        Current = nums[0]
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        dp = []
+        dp.append(nums[0])
         for i in range(1, len(nums)):
-            Current = max(nums[i], Current + nums[i])
-            MaxSum = max(MaxSum, Current)
-        return MaxSum
+            dp.append(max(nums[i], nums[i]+dp[i-1]))
+        return max(dp)
