@@ -14,5 +14,4 @@ class Solution(object):
                 result.append("Buzz")
             else :
                 result.append(str(i))
-        print(result)
         return result
