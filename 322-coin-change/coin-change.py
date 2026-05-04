@@ -11,7 +11,6 @@ class Solution(object):
             for j in range(amount+1):
                 if coins[i] <= j:
                     ways[j] = min(ways[j - coins[i]]+1, ways[j])
-        print(ways[amount])
         return ways[amount] if ways[amount] != float('inf') else -1
 
 
