@@ -4,9 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        dp = [0]*100
-        if n == 1 or n == 2 :
-            return (n)
+        dp = [0]*46
         dp[1] = 1
         dp[2] = 2
         for i in range(3, n + 1):
